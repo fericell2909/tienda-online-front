@@ -9,6 +9,7 @@
     ],
     "overrides": [
     ],
+    "eslintIgnore": ["src/styles/index.css"],
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"

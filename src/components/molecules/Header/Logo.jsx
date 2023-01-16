@@ -1,9 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Logo = () => {
   return (
-    <div>
-        <img src="https://ed.team/images/logo/logo.svg" alt="Logo" />
+    <div className='logo flex'>
+      <Link to="/">
+        <img src="https://ed.team/images/logo/logo-monocolor.svg" alt="Logo" />
+      </Link>
     </div>
   )
 }
