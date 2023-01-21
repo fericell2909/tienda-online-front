@@ -50,7 +50,10 @@ const Login = () => {
           />
         </div>
         <div className="text-center pt-1 mb-12 pb-1">
-          <button className="bg-gradient mb-2 p-2 w-full c-white" type="submit">
+          <button
+            className="bg-gradient mb-2 p-2 w-full text-white"
+            type="submit"
+          >
             Ingresar
           </button>
           <Link className="text-gray-500" to="/registro">
