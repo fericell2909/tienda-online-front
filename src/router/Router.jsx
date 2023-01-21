@@ -1,9 +1,10 @@
-import { createBrowserRouter } from 'react-router-dom'
-import Error404 from '../components/pages/Error404'
-import Home from '../components/pages/Home'
-import Login from '../components/pages/Login'
-import Products from '../components/pages/Products'
-import App from '../components/templates/App'
+import { createBrowserRouter } from 'react-router-dom';
+import Error404 from '../components/pages/Error404';
+import Home from '../components/pages/Home';
+import Login from '../components/pages/Login';
+import Products from '../components/pages/Products';
+import Register from '../components/pages/Register';
+import App from '../components/templates/App';
 
 const router = createBrowserRouter([
   {
@@ -13,19 +14,22 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />
+        element: <Home />,
       },
       {
         path: '/products',
-        element: <Products />
-      }
-    ]
+        element: <Products />,
+      },
+    ],
   },
   {
     path: '/login',
     element: <Login />,
-  }
-  
-])
+  },
+  {
+    path: '/registro',
+    element: <Register />,
+  },
+]);
 
-export default router
+export default router;
