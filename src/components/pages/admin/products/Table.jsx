@@ -1,6 +1,6 @@
 import useFecth from '../../hooks/useFetch';
 
-const Products = () => {
+const Table = () => {
   const { data, error, loading } = useFecth('public/products');
 
   if (loading) {
@@ -23,4 +23,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Table;
