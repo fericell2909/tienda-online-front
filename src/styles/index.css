@@ -14,3 +14,15 @@
     --tw-text-opacity: 1;
     color: rgb(224 242 254 / var(--tw-text-opacity));
 }
+
+/* Loader*/
+
+.spin {
+    animation: spinrotation infinite 2s ease-out;
+}
+
+@keyframes spinrotation {
+    to {
+        transform: rotate(2turn);
+    }
+}

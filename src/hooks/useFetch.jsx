@@ -7,7 +7,6 @@ const useFecth = (endpoint, headers = {}) => {
   const [error, setError] = useState();
   const [loading, setLoading] = useState(true);
 
-  console.log('llanadno');
   useEffect(() => {
     axios
       .get(`${API_URL}/${endpoint}`)

@@ -1,25 +1,27 @@
 import useFecth from '../../hooks/useFetch';
+import Loader from '../atoms/Loader';
+import ProductCard from '../molecules/ProductCard';
 
 const Products = () => {
   const { data, error, loading } = useFecth('public/products');
 
   if (loading) {
-    return <h1>CARGANDO...</h1>;
+    return <Loader />;
   }
 
   if (error) {
-    return <h1>Error en la petición de productos.</h1>;
+    return <div>{error?.message}</div>;
   }
 
   return (
-    <div>
-      <h1>Products</h1>
-      {data.length === 0 ? (
-        <p>No existen productos.</p>
-      ) : (
-        data.map((prod) => <div key={prod.id}>{JSON.stringify(prod)}</div>)
-      )}
-    </div>
+    <section className="py-16 max-w-200 m-auto">
+      <h1 className="text-3xl mb-6">Explora nuestros productos</h1>
+      <div className="grid grid-cols-4 gap-6">
+        {data.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
+    </section>
   );
 };
 
