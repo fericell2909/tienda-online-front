@@ -30,8 +30,8 @@ const Form = () => {
 
   useEffect(() => {
     if (!product) return;
-    setIsNew(product.features.stats.isNew);
-    setHasDelivery(product.features.stats.hasDelivery);
+    setIsNew(product?.features?.stats?.isNew);
+    setHasDelivery(product?.features?.stats?.hasDelivery);
   }, [product]);
 
   const [error, setError] = useState();
@@ -90,7 +90,7 @@ const Form = () => {
     <div className="max-w-200 m-auto">
       <section className="pt-10">
         <h1 className="text-4xl mb-6">
-          {`${params.iD ? 'Editar' : 'Crear'}`} producto
+          {`${params.id ? 'Editar' : 'Crear'}`} producto
         </h1>
         <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-2 gap-6 mb-6">
@@ -110,7 +110,7 @@ const Form = () => {
                 type="number"
                 name="price"
                 required
-                defaultValue={product && product.price}
+                defaultValue={product && product?.price}
                 className="border-2  p-2"
               />
             </div>
@@ -121,7 +121,7 @@ const Form = () => {
                 name="sold"
                 step="1"
                 required
-                defaultValue={product && product.features.stats.sold}
+                defaultValue={product && product.features?.stats?.sold}
                 className="text-center border-2  p-2"
               />
             </div>
@@ -141,7 +141,7 @@ const Form = () => {
                 type="text"
                 name="brand"
                 required
-                defaultValue={product && product.features.details.brand}
+                defaultValue={product && product?.features?.details?.brand}
                 className="text-center border-2  p-2"
               />
             </div>
@@ -151,7 +151,7 @@ const Form = () => {
                 type="text"
                 name="model"
                 required
-                defaultValue={product && product.features.details.model}
+                defaultValue={product && product?.features?.details?.model}
                 className="text-center border-2  p-2"
               />
             </div>
@@ -161,7 +161,7 @@ const Form = () => {
                 type="text"
                 name="color"
                 required
-                defaultValue={product && product.features.details.color}
+                defaultValue={product && product?.features?.details?.color}
                 className="text-center border-2  p-2"
               />
             </div>
@@ -172,7 +172,7 @@ const Form = () => {
                   type="text"
                   name="year"
                   required
-                  defaultValue={product && product.features.details.year}
+                  defaultValue={product && product?.features?.details?.year}
                   className="text-center border-2  p-2"
                 />
               </div>
@@ -182,7 +182,7 @@ const Form = () => {
                   type="number"
                   name="rating"
                   required
-                  defaultValue={product && product.features.stats.rating}
+                  defaultValue={product && product?.features?.details?.rating}
                   min="1"
                   max="5"
                   step="1"
@@ -196,7 +196,7 @@ const Form = () => {
                 type="text"
                 name="description"
                 required
-                defaultValue={product && product.description}
+                defaultValue={product && product?.description}
                 className="text-center border-2  p-2"
               />
             </div>
@@ -206,7 +206,7 @@ const Form = () => {
                 name="category"
                 className="outline-none h-12 rounded border-2  p-2"
                 defaultValue={
-                  product ? product.features.details.category : 'Otros'
+                  product ? product?.features?.details?.category : 'Otros'
                 }
               >
                 <option value="Otros" disabled selected>
