@@ -34,6 +34,11 @@ const MainMenu = () => {
           ) : (
             <>
               <li className="flex items-center">
+                <Link className="menu-item" to="/admin/productos">
+                  Administrar productos
+                </Link>
+              </li>
+              <li className="flex items-center">
                 <a onClick={handleSession} className="menu-item cursor-pointer">
                   Cerrar Sesión
                 </a>

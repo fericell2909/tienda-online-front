@@ -6,6 +6,7 @@ import Home from '../components/pages/Home';
 import Login from '../components/pages/Login';
 import Products from '../components/pages/Products';
 import Register from '../components/pages/Register';
+import Admin from '../components/templates/Admin';
 import App from '../components/templates/App';
 
 const router = createBrowserRouter([
@@ -33,17 +34,24 @@ const router = createBrowserRouter([
     element: <Register />,
   },
   {
-    path: '/admin/productos/crear',
-    element: <Form />,
-  },
-  ,
-  {
-    path: '/admin/productos/editar/:id',
-    element: <Form />,
-  },
-  {
-    path: '/admin/productos',
-    element: <Table />,
+    path: '/admin',
+    element: <Admin />,
+    errorElement: <Error404 />,
+    children: [
+      {
+        path: '/admin/productos/crear',
+        element: <Form />,
+      },
+      ,
+      {
+        path: '/admin/productos/editar/:id',
+        element: <Form />,
+      },
+      {
+        path: '/admin/productos',
+        element: <Table />,
+      },
+    ],
   },
 ]);
 
