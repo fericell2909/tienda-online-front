@@ -4,6 +4,7 @@ import Table from '../components/pages/admin/products/Table';
 import Error404 from '../components/pages/Error404';
 import Home from '../components/pages/Home';
 import Login from '../components/pages/Login';
+import Product from '../components/pages/Product';
 import Products from '../components/pages/Products';
 import Register from '../components/pages/Register';
 import Admin from '../components/templates/Admin';
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: '/products',
         element: <Products />,
+      },
+      {
+        path: '/productos/:id',
+        element: <Product />,
       },
     ],
   },

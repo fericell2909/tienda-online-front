@@ -16,7 +16,7 @@ const ProductCard = ({ product }) => {
         </Link>
       </div>
       <div className="mb-6">
-        <Link to={`products/${id}`}>
+        <Link to={`/productos/${id}`}>
           <h3 className="text-xl font-semibold tracking-tight text-gray-900 mb-2">
             {product_name}
           </h3>
