@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Form from '../components/pages/admin/products/Form';
 import Table from '../components/pages/admin/products/Table';
+import Cart from '../components/pages/Cart';
 import Error404 from '../components/pages/Error404';
 import Home from '../components/pages/Home';
 import Login from '../components/pages/Login';
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/productos/:id',
         element: <Product />,
+      },
+      {
+        path: '/carrito',
+        element: <Cart />,
       },
     ],
   },

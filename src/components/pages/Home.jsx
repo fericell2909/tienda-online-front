@@ -1,14 +1,13 @@
-import { API_URL } from '../../constants/env'
+import { API_URL } from '../../constants/env';
 
-function Home () {
+function Home() {
   return (
-   <>
-    <div>
-      <h1>Hola Mundo {API_URL}</h1>
-    </div>
-   </>
-
-  )
+    <>
+      <div>
+        <h1>Hola Mundo {API_URL}</h1>
+      </div>
+    </>
+  );
 }
 
-export default Home
+export default Home;
