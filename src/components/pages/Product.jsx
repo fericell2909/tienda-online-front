@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 import useFetch from '../../hooks/useFetch';
 import Badge from '../atoms/Badge';
-// import BuyButton from '../atoms/BuyButton';
+import BuyButton from '../atoms/BuyButton';
 import Loader from '../atoms/Loader';
 import ProductRating from '../atoms/ProductRating';
 import PriceDetails from '../molecules/PriceDetails';
@@ -56,7 +56,7 @@ const Product = () => {
             </div>
             <PriceDetails price={data.price} />
             <div className="grid grid-cols-2 gap-4 mb-4">
-              {/* <BuyButton text="Comprar ahora" /> */}
+              <BuyButton text="Comprar ahora" />
               {!state.cart.find((p) => p.id === data.id) ? (
                 // <BuyButton
                 //   text="Agregar al carrito"

@@ -6,7 +6,7 @@ import { API_URL } from '../../constants/env';
 import { CartContext } from '../../context/CartContext';
 import { token } from '../../helpers/auth';
 import SummaryItem from '../atoms/SummaryItem';
-import PayPalPayment from '../organisms/PayPalPayment';
+// import PayPalPayment from '../organisms/PayPalPayment';
 
 function Cart() {
   const { state } = useContext(CartContext);
@@ -58,7 +58,7 @@ function Cart() {
               ) : (
                 <>
                   <p>ID de la ORDEN de COMPRA: {order.id}</p>
-                  <PayPalPayment value={value} order={order} />
+                  {/* <PayPalPayment value={value} order={order} /> */}
                 </>
               )}
             </div>
